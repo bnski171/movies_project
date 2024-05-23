@@ -1,0 +1,4 @@
+pip install -r requirements.txt
+
+запуск апи:
+uvicorn moviesapp.main:app --reload
