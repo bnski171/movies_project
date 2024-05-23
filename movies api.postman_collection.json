@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "a13b90e5-06d6-4cbd-8b3d-1ec2a4a47803",
+		"name": "movies api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29593894"
+	},
+	"item": [
+		{
+			"name": "Film Work",
+			"item": [
+				{
+					"name": "post film_work",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Example Film\",\r\n  \"description\": \"An example film description\",\r\n  \"creation_date\": \"2024-01-01\",\r\n  \"file_path\": \"/path/to/file\",\r\n  \"rating\": 8.5,\r\n  \"type\": \"Movie\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/film_works/"
+					},
+					"response": []
+				},
+				{
+					"name": "update film_work",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Updated Film\",\r\n  \"description\": \"Updated description\",\r\n  \"creation_date\": \"2022-01-01\",\r\n  \"file_path\": \"/path/to/updated_file\",\r\n  \"rating\": 9.0,\r\n  \"type\": \"Movie\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/film_works/{film_work_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "get film_work id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/film_works/bb63ee71-55ac-4f08-a78c-6ec2e9c398ca"
+					},
+					"response": []
+				},
+				{
+					"name": "get film_works",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/film_works/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete film_work",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/film_works/{film_work_id}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "post person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"full_name\": \"John Doe\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/persons/"
+					},
+					"response": []
+				},
+				{
+					"name": "update person",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"full_name\": \"Jane Doe\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/persons/{person_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "get person id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/persons/{person_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "get persons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/persons/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete person",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/persons/{person_id}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genre",
+			"item": [
+				{
+					"name": "post genre",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Drama\",\r\n  \"description\": \"Dramatic films\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/genres/"
+					},
+					"response": []
+				},
+				{
+					"name": "update genre",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Thriller\",\r\n  \"description\": \"Thrilling films\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/genres/{genre_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "get genre id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/genres/{genre_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "get genres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/genres/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete genre",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/genres/{genre_id}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Person Film Work",
+			"item": [
+				{
+					"name": "post person film work",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"film_work_id\": \"UUID of film work\",\r\n  \"person_id\": \"UUID of person\",\r\n  \"role\": \"Actor\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/person_film_works/"
+					},
+					"response": []
+				},
+				{
+					"name": "get preson film work id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/person_film_works/{person_film_work_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "get person film works",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/person_film_works/"
+					},
+					"response": []
+				},
+				{
+					"name": "update person film work",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"film_work_id\": \"UUID of film work\",\r\n  \"person_id\": \"UUID of person\",\r\n  \"role\": \"Director\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "person_film_works/{person_film_work_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "delete person film work ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/person_film_works/{person_film_work_id}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genre Film Work",
+			"item": [
+				{
+					"name": "post genre film work",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"film_work_id\": \"UUID of film work\",\r\n  \"genre_id\": \"UUID of genre\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/genre_film_works/"
+					},
+					"response": []
+				},
+				{
+					"name": "get genre film work id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/genre_film_works/{genre_film_work_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "get genre film works",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/genre_film_works/"
+					},
+					"response": []
+				},
+				{
+					"name": "update genre film work",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"film_work_id\": \"UUID of film work\",\r\n  \"genre_id\": \"UUID of genre\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/genre_film_works/{genre_film_work_id}"
+					},
+					"response": []
+				},
+				{
+					"name": "delete genre film work",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/genre_film_works/{genre_film_work_id}"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
