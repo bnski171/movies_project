@@ -2,3 +2,6 @@ pip install -r requirements.txt
 
 запуск апи:
 uvicorn moviesapp.main:app --reload
+
+тест запроса с токеном
+curl -X GET "http://127.0.0.1:8000/film_works/" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiZXhwIjoxNzE3NTA0NDAyfQ.TcWFgpoUy_jZ4cSs_88hst2IBLa40GW8Am7SccXMg0o"
